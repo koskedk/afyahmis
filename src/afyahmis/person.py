@@ -34,8 +34,8 @@ class Person:
         self._age = Age.from_dob(dob)
 
     @classmethod
-    def new(cls, first_name, last_name, gender, dob):
-        name = PersonName.new(first_name, last_name)
+    def from_demographics(cls, first_name, last_name, gender, dob):
+        name = PersonName.from_names(first_name, last_name)
         return cls(name, gender, dob)
 
     def __str__(self):

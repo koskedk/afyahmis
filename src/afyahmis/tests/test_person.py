@@ -13,7 +13,7 @@ logger.addHandler(logging.StreamHandler(sys.stdout))
 
 class TestPerson(unittest.TestCase):
     def test_new(self):
-        person = Person.new('John', 'Wick', Gender.MALE, datetime(1983, 4, 7).date())
+        person = Person.from_demographics('John', 'Wick', Gender.MALE, datetime(1983, 4, 7).date())
         self.assertEqual(person.name.first_name, 'John')
         self.assertEqual(person.name.last_name, 'WICK')
         self.assertEqual(person.gender, Gender.MALE)

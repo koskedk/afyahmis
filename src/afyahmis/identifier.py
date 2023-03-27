@@ -21,7 +21,7 @@ class Identifier:
         self._value = id_value
 
     @classmethod
-    def new(cls, id_type: IdentifierType, id_value):
+    def from_id(cls, id_type: IdentifierType, id_value):
         return cls(id_type, id_value)
 
     def __str__(self):

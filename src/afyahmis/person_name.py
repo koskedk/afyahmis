@@ -19,7 +19,7 @@ class PersonName:
         self._last_name = last_name
 
     @classmethod
-    def new(cls, first_name, last_name):
+    def from_names(cls, first_name, last_name):
         return cls(first_name, last_name)
 
     def __str__(self):

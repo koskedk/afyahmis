@@ -14,9 +14,9 @@ logger.addHandler(logging.StreamHandler(sys.stdout))
 
 class TestPatient(unittest.TestCase):
     def test_new(self):
-        patient = Patient.create('John', 'Wick', Gender.MALE, datetime(1983, 4, 7).date(),
-                                 IdentifierType.NATIONAL,
-                                 'HLS-9910-KE')
+        patient = Patient.from_details('John', 'Wick', Gender.MALE, datetime(1983, 4, 7).date(),
+                                       IdentifierType.NATIONAL,
+                                       'HLS-9910-KE')
         self.assertEqual(patient.name.first_name, 'John')
         self.assertEqual(patient.name.last_name, 'WICK')
         self.assertEqual(patient.gender, Gender.MALE)

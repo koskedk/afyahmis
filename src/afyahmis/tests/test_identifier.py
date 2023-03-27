@@ -1,4 +1,3 @@
-import datetime
 import logging
 import sys
 import unittest
@@ -13,10 +12,10 @@ logger.addHandler(logging.StreamHandler(sys.stdout))
 
 class TestIdentifier(unittest.TestCase):
     def test_new(self):
-        patiendId = Identifier.new(IdentifierType.SERVICE, "10000010")
-        self.assertEqual(patiendId.type, IdentifierType.SERVICE)
-        self.assertEqual(patiendId.value, "10000010")
-        logging.debug(f'{patiendId}')
+        patiend_id = Identifier.from_id(IdentifierType.SERVICE, "10000010")
+        self.assertEqual(patiend_id.type, IdentifierType.SERVICE)
+        self.assertEqual(patiend_id.value, "10000010")
+        logging.debug(f'{patiend_id}')
 
 
 if __name__ == '__main__':
